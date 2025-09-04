@@ -37,7 +37,8 @@ def division():
     num2 = float(entradaDos.get())
     if num2==0:
         etiquetaTres.config(text="ERROR NO SE PUEDE DIVIDIR EN 0")
-    return num1/num2
+    else:
+        return num1/num2
 
 def Sumar():
     resultado=suma()
