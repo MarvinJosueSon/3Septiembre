@@ -33,12 +33,15 @@ def multiplicacion():
     num2 = float(entradaDos.get())
     return num1*num2
 def division():
-    num1 = float(entrada.get())
-    num2 = float(entradaDos.get())
-    if num2==0:
-        etiquetaTres.config(text="ERROR NO SE PUEDE DIVIDIR EN 0")
-    else:
-        return num1/num2
+    try:
+        num1 = float(entrada.get())
+        num2 = float(entradaDos.get())
+        if num2==0:
+            etiquetaTres.config(text="ERROR NO SE PUEDE DIVIDIR EN 0")
+        else:
+            return num1/num2
+    except ValueError:
+        etiquetaTres.config(text="ERROR NO SE PUEDE REALIZAR LA OPERACION")
 
 def Sumar():
     resultado=suma()
